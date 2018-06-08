@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title>IR Survey</title>
+    <link type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container" ng-controller="MainController as ctrl">
+        <div class="row">
+            <div class="col-md-6">Query</div>
+            <div class="col-md-6">Answers</div>
+        </div>
+        <div class="row" ng-repeat="(key, value) in ctrl.items">
+            <div class="col-md-6">
+                <div class="row">
+                    {{value.query}}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    {{value.answer}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <button type="button" class="btn btn-primary">next</button>
+        </div>
+    </div>
+</body>
+<!--node modules-->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/angular/angular.min.js"></script>
+<!--app-->
+<script src="js/app.js"></script>
+<!--controllers-->
+<script src="js/controllers/MainController.js"></script>
+
+</html>
