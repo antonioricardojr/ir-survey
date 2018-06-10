@@ -13,20 +13,20 @@
             <div class="col-md-6">Query</div>
             <div class="col-md-6">Answers</div>
         </div>
-        <div class="row" ng-repeat="(key, value) in ctrl.items">
+        <div class="row">
             <div class="col-md-6">
                 <div class="row">
-                    {{value.query}}
+                    {{ctrl.item_to_evaluate.query}}
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="row">
-                    {{value.answer}}
+                    {{ctrl.item_to_evaluate.answer}}
                 </div>
             </div>
         </div>
         <div class="row">
-            <button type="button" class="btn btn-primary">next</button>
+            <button type="button" class="btn btn-primary" ng-click="ctrl.next()">next</button>
         </div>
     </div>
 </body>
